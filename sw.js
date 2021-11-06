@@ -3,6 +3,9 @@
 
 const CACHE_NAME = 'lab-7-starter';
 var urlsToCache = [
+  '',
+  'styles/main.css',
+  'assets/scripts/main.js',
   'https://introweb.tech/assets/json/ghostCookies.json',
   'https://introweb.tech/assets/json/birthdayCake.json',
   'https://introweb.tech/assets/json/chocolateChip.json',
@@ -21,7 +24,7 @@ self.addEventListener('install', function (event) {
     caches.open(CACHE_NAME)
       .then(function(cache) {
         console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+        return cache.addAll([]);
       })
   );
 });
